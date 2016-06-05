@@ -1,0 +1,22 @@
+<template bindable="router">
+	<nav>
+		<div class="nav-wrapper grey lighten-3">
+			<div class="container">
+				<a href="#!" class="brand-logo">
+					<img src="https://cdn1.skypicker.com/images/logos/kiwi-navbar.png" />
+				</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+						<a href.bind="row.href">${row.title}</a>
+					</li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+						<a href.bind="row.href">${row.title}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</template>

@@ -1,0 +1,38 @@
+
+.space-50 {
+  height: 50px;
+}
+
+input {
+  box-shadow: none !important;
+}
+
+nav .brand-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.input-autocomplete-container {
+  position: relative;
+
+  .input-autocomplete {
+    box-sizing: content-box;
+    width: 92%;
+    width: calc(100% - 3rem);
+    margin-left: 3rem;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    z-index: 999;
+  }
+
+  label {
+    box-sizing: content-box;
+  }
+}
+

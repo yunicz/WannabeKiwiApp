@@ -1,10 +1,9 @@
 <template>
-  <require from="nav-bar.html"></require>
-<!--  <require from="bootstrap/dist/css/bootstrap.css"></require> --> 
-  
-  <nav-bar router.bind="router"></nav-bar>
-
   <div class="page-host">
+
+    <require from="navbar.html"></require>
+    <navbar router.bind="router"></navbar>
+
     <router-view></router-view>
   </div>
 </template>

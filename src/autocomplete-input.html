@@ -1,0 +1,25 @@
+<template bindable="label">
+
+	<div class="input-autocomplete-container">
+		<i class="material-icons prefix">${inputIcon}</i>
+		<input focus.bind="hasFocus"
+		       autocomplete="off"
+		       onkeyup.bind="keyupHandler"
+		       value.bind="inputValue"
+		       id.bind="inputId"
+		       type="text"
+		       class="validate" />
+		<label for.bind="inputId">${inputLabel}</label>
+		<div if.bind="hasFocus" class="collection input-autocomplete">
+			<a if.bind="autocompleteOptions.length > 0"
+			   onmousedown.bind="setValue"
+			   data-id="${item.id}"
+			   repeat.for="item of autocompleteOptions"
+			   href="#"
+			   class="collection-item">${item.value}</a>
+			<a href="#!" class="collection-item" if.bind="autocompleteOptions.length === 0">No result found</a>
+			<a href="#!" class="collection-item" if.bind="autocompleteOptions === null">Type in city name</a>
+		</div>
+	</div>
+
+</template>
