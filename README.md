@@ -1,4 +1,4 @@
-# aurelia-skeleton-navigation-webpack
+# WannabeKiwiApp
 
 ## Getting Started
 
