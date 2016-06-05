@@ -16,6 +16,16 @@ export class Welcome {
     this.departureInput = $('.datepicker').pickadate();
   }
 
+  formatRoute(flight) {
+    let formatedRouter = '';
+    if (flight.route.length === 1) {
+      return `${flight.flyFrom} => ${flight.flyTo}`;
+    }
+    else {
+      return flight.route.map(route => `${route.flyFrom} => ${route.flyTo}`).join(', ');
+    }
+  }
+
   formatTimestamp(stamp) {
     return moment(stamp, 'X').format('DD MMMM YYYY');
   }

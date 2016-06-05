@@ -9,13 +9,12 @@ export class AutocompleteInputCustomElement {
 	@bindable inputId = '';
 	@bindable({ defaultBindingMode: bindingMode.twoWay }) inputModel = '';
 
-
 	hasFocus = false;
 
 	autocompleteOptions = null;
 
 	model = null;
-
+	
 	keyupHandler = () => {
 
 		const query = {
